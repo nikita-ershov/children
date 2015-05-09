@@ -861,4 +861,21 @@
     "use strict";
     
     new WOW().init();
+});;$(function() {
+    "use strict";
+    
+    $(".media-block").each(function() {
+        var $el = $(this);
+        
+        var slideshows = $('.cycle-slideshow', $el).on('cycle-next cycle-prev cycle-pager-activated', function(e, opts) {
+            // advance the other slideshow
+            slideshows.not(this).cycle('goto', opts.currSlide);
+        });
+
+        $('.media-block__gallery .media-block__gallery__item', $el).click(function(){
+            var index = $('.media-block__gallery', $el).data('cycle.API').getSlideIndex(this);
+            slideshows.cycle('goto', index);
+        });        
+    });
+    
 });

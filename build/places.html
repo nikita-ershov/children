@@ -7,6 +7,8 @@
     <link rel="stylesheet" type='text/css' href="css/style.min.css"/>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.cycle2.min.js"></script>
+    <script src="js/jquery.cycle2.carousel.js"></script>
+    <script src="js/jquery.cycle2.tile.js"></script>
     <script src="js/script.min.js"></script>
 </head>
 <body>
@@ -53,10 +55,24 @@
 <div class="place-block content-block content-block_bg-01 content-block_line-bottom wow fadeIn">
     <div class="container">
         <div class="place-block__title">Филиал Онежская, 6а</div>
-        <div class="media-block">
+        <div class="media-block" id="block-02">
             <div class="row">
                 <div class="col-xs-6">
-                    <div class="media-block__image"><img src="http://malsup.github.io/images/beach1.jpg" width="468" height="344" /></div>
+                    <div class="mark-label">1 группа</div>
+                    <div class="mark-label mark-label_yellow">3 педагога</div>                    
+                    <div class="media-block__image cycle-slideshow" data-cycle-timeout="15000" data-cycle-log=false>
+                        <div class="cycle-prev"><span class="icon-left-open"></span></div>
+                        <div class="cycle-next"><span class="icon-right-open"></span></div>
+                        <img src="http://malsup.github.io/images/beach1.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach2.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach3.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach4.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach5.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach6.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach7.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach8.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach9.jpg" width="468" height="344" />
+                    </div>
                 </div>
                 <div class="col-xs-6">
                     <div class="place-block__info">
@@ -78,14 +94,90 @@
                     <button class="btn btn_secondary btn_block">Заказать обратный звонок</button>
                 </div>
             </div>
-            <div class="media-block__gallery">
+            <div class="media-block__gallery cycle-slideshow"
+                            data-cycle-slides="> div"
+                            data-cycle-log=false
+                            data-cycle-timeout="0"
+                            data-cycle-fx="carousel"
+                            data-cycle-carousel-visible="8"
+                            data-cycle-carousel-fluid=false
+                            data-allow-wrap="false">
                 <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
-                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
-                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
-                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
-                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
-                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
-                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach2.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach3.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach4.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach5.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach6.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach7.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach8.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach9.jpg" width="107" height="87" /></div>
+            </div>
+        </div>
+        <div class="place-block__tabs">
+            <ul class="tabs">
+                <li class="tabs__item active"><a href="#specialists-1" data-toggle="tab">педагоги</a></li>
+                <li class="tabs__item"><a href="#payment-1" data-toggle="tab">варианты оплаты</a></li>
+                <li class="tabs__item"><a href="#feedback-1" data-toggle="tab">отзывы</a></li>
+            </ul>
+            <div class="tabs__content fade active in" id="specialists-1">
+                <div class="row specialist__list">
+                    <div class="col-xs-4">
+                        <div class="specialist">
+                            <div class="specialist__image"><img></div>
+                            <div class="specialist__info">
+                                <div class="specialist__name"><a href="#">Дюкина Надежда Геннадьевна</a></div>
+                                <div class="specialist__status">Воспитатель</div>
+                                <div class="specialist__exp">Стаж работы 25 лет<br/>В “Крепышах” 8 лет</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="specialist">
+                            <div class="specialist__image"><img></div>
+                            <div class="specialist__info">
+                                <div class="specialist__name">Дюкина Надежда Геннадьевна</div>
+                                <div class="specialist__status">Воспитатель</div>
+                                <div class="specialist__exp">Стаж работы 25 лет<br/>В “Крепышах” 8 лет</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="specialist">
+                            <div class="specialist__image"><img></div>
+                            <div class="specialist__info">
+                                <div class="specialist__name">Дюкина Надежда Геннадьевна</div>
+                                <div class="specialist__status">Воспитатель</div>
+                                <div class="specialist__exp">Стаж работы 25 лет<br/>В “Крепышах” 8 лет</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="specialist">
+                            <div class="specialist__image"><img></div>
+                            <div class="specialist__info">
+                                <div class="specialist__name">Дюкина Надежда Геннадьевна</div>
+                                <div class="specialist__status">Воспитатель</div>
+                                <div class="specialist__exp">Стаж работы 25 лет<br/>В “Крепышах” 8 лет</div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-xs-4">
+                        <div class="specialist">
+                            <div class="specialist__image"><img></div>
+                            <div class="specialist__info">
+                                <div class="specialist__name">Дюкина Надежда Геннадьевна</div>
+                                <div class="specialist__status">Воспитатель</div>
+                                <div class="specialist__exp">Стаж работы 25 лет<br/>В “Крепышах” 8 лет</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__content fade" id="payment-1">
+                варианты оплаты
+            </div>
+            <div class="tabs__content fade" id="feedback-1">
+                отзывы
             </div>
         </div>
     </div>
@@ -94,10 +186,24 @@
 <div class="place-block content-block content-block_bg-01 content-block_line-bottom wow fadeIn">
     <div class="container">
         <div class="place-block__title">Филиал Онежская, 6а</div>
-        <div class="media-block">
+        <div class="media-block" id="block-01">
             <div class="row">
                 <div class="col-xs-6">
-                    <div class="media-block__image"><img src="http://malsup.github.io/images/beach1.jpg" width="468" height="344" /></div>
+                    <div class="mark-label">1 группа</div>
+                    <div class="mark-label mark-label_yellow">3 педагога</div>                    
+                    <div class="media-block__image cycle-slideshow" data-cycle-timeout="15000" data-cycle-log=false>
+                        <div class="cycle-prev"><span class="icon-left-open"></span></div>
+                        <div class="cycle-next"><span class="icon-right-open"></span></div>
+                        <img src="http://malsup.github.io/images/beach1.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach2.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach3.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach4.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach5.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach6.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach7.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach8.jpg" width="468" height="344" />
+                        <img src="http://malsup.github.io/images/beach9.jpg" width="468" height="344" />
+                    </div>
                 </div>
                 <div class="col-xs-6">
                     <div class="place-block__info">
@@ -119,14 +225,90 @@
                     <button class="btn btn_secondary btn_block">Заказать обратный звонок</button>
                 </div>
             </div>
-            <div class="media-block__gallery">
+            <div class="media-block__gallery cycle-slideshow"
+                            data-cycle-slides="> div"
+                            data-cycle-log=false
+                            data-cycle-timeout="0"
+                            data-cycle-fx="carousel"
+                            data-cycle-carousel-visible="8"
+                            data-cycle-carousel-fluid=false
+                            data-allow-wrap="false">
                 <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
-                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
-                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
-                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
-                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
-                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
-                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach1.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach2.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach3.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach4.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach5.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach6.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach7.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach8.jpg" width="107" height="87" /></div>
+                <div class="media-block__gallery__item"><img src="http://malsup.github.io/images/beach9.jpg" width="107" height="87" /></div>
+            </div>
+        </div>
+        <div class="place-block__tabs">
+            <ul class="tabs">
+                <li class="tabs__item active"><a href="#specialists-2" data-toggle="tab">педагоги</a></li>
+                <li class="tabs__item"><a href="#payment-2" data-toggle="tab">варианты оплаты</a></li>
+                <li class="tabs__item"><a href="#feedback-2" data-toggle="tab">отзывы</a></li>
+            </ul>
+            <div class="tabs__content fade active in" id="specialists-2">
+                <div class="row specialist__list">
+                    <div class="col-xs-4">
+                        <div class="specialist">
+                            <div class="specialist__image"><img></div>
+                            <div class="specialist__info">
+                                <div class="specialist__name"><a href="#">Дюкина Надежда Геннадьевна</a></div>
+                                <div class="specialist__status">Воспитатель</div>
+                                <div class="specialist__exp">Стаж работы 25 лет<br/>В “Крепышах” 8 лет</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="specialist">
+                            <div class="specialist__image"><img></div>
+                            <div class="specialist__info">
+                                <div class="specialist__name">Дюкина Надежда Геннадьевна</div>
+                                <div class="specialist__status">Воспитатель</div>
+                                <div class="specialist__exp">Стаж работы 25 лет<br/>В “Крепышах” 8 лет</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="specialist">
+                            <div class="specialist__image"><img></div>
+                            <div class="specialist__info">
+                                <div class="specialist__name">Дюкина Надежда Геннадьевна</div>
+                                <div class="specialist__status">Воспитатель</div>
+                                <div class="specialist__exp">Стаж работы 25 лет<br/>В “Крепышах” 8 лет</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="specialist">
+                            <div class="specialist__image"><img></div>
+                            <div class="specialist__info">
+                                <div class="specialist__name">Дюкина Надежда Геннадьевна</div>
+                                <div class="specialist__status">Воспитатель</div>
+                                <div class="specialist__exp">Стаж работы 25 лет<br/>В “Крепышах” 8 лет</div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-xs-4">
+                        <div class="specialist">
+                            <div class="specialist__image"><img></div>
+                            <div class="specialist__info">
+                                <div class="specialist__name">Дюкина Надежда Геннадьевна</div>
+                                <div class="specialist__status">Воспитатель</div>
+                                <div class="specialist__exp">Стаж работы 25 лет<br/>В “Крепышах” 8 лет</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__content fade" id="payment-2">
+                варианты оплаты
+            </div>
+            <div class="tabs__content fade" id="feedback-2">
+                отзывы
             </div>
         </div>
     </div>
@@ -141,7 +323,9 @@
                 <div class="office-block">
                     <div class="office-block__title">Филиал Онежская, 6а</div>
                     <div class="office-block__info">
-                        <div class="office-block__image"><img src="http://malsup.github.io/images/beach1.jpg" height="254" /></div>
+                        <div class="office-block__image">
+                            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=gUJfw4HK9O08MNjt9wVUN6nTyanElF1u&width=100%&height=254"></script>
+                        </div>
                         <div class="office-block__desc">
                             <div class="clearfix office-block__contact">
                                 <div class="pull-left office-block__phone">
@@ -167,7 +351,9 @@
                 <div class="office-block">
                     <div class="office-block__title">Филиал Онежская, 6а</div>
                     <div class="office-block__info">
-                        <div class="office-block__image"><img src="http://malsup.github.io/images/beach1.jpg" height="254" /></div>
+                        <div class="office-block__image">
+                            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=gUJfw4HK9O08MNjt9wVUN6nTyanElF1u&width=100%&height=254"></script>
+                        </div>
                         <div class="office-block__desc">
                             <div class="clearfix office-block__contact">
                                 <div class="pull-left office-block__phone">
