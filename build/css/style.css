@@ -4015,6 +4015,8 @@ Copyright (c) 2015 Daniel Eden
 .btn_primary {
   color: #fff;
   background-color: #9c1fa5;
+  background-image: -webkit-linear-gradient(top, #ad45b4 0%, #900940 100%);
+  background-image: linear-gradient(to bottom, #ad45b4 0%, #900940 100%);
   border-color: #930a9d;
   font-weight: bold;
 }
@@ -4029,6 +4031,8 @@ Copyright (c) 2015 Daniel Eden
 .btn_secondary {
   color: #fff;
   background-color: #fea345;
+  background-image: -webkit-linear-gradient(top, #fea548 0%, #e57503 100%);
+  background-image: linear-gradient(to bottom, #fea548 0%, #e57503 100%);
   border-color: #fe890f;
   font-weight: bold;
 }
@@ -4042,6 +4046,8 @@ Copyright (c) 2015 Daniel Eden
 .btn_danger {
   color: #fff;
   background-color: #d11d1d;
+  background-image: -webkit-linear-gradient(top, #e86868 0%, #ad1b1b 100%);
+  background-image: linear-gradient(to bottom, #e86868 0%, #ad1b1b 100%);
   border-color: #d11d1d;
   font-weight: bold;
 }
@@ -5160,7 +5166,37 @@ img {
   line-height: 1.7;
 }
 .other-list li {
-  list-style: disc;
+  position: relative;
+}
+.other-list li:before {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  display: block;
+  content: "";
+  background: #930a9d;
+  position: absolute;
+  left: -16px;
+  top: 12px;
+}
+.other-list li:nth-child(6n+1):before {
+  background: #f00;
+}
+.other-list li:nth-child(6n+2):before {
+  background: #fe890f;
+}
+.other-list li:nth-child(6n+3):before {
+  background: #f7e918;
+}
+.other-list li:nth-child(6n+4):before {
+  background: #16a801;
+}
+.other-list li:nth-child(6n+5):before {
+  background: #009fd4;
+}
+.other-list li:nth-child(6n+6):before {
+  background: #0059ae;
 }
 
 .paging {
